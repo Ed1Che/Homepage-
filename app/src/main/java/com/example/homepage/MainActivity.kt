@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.example.homepage.R
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -57,5 +58,37 @@ class MainActivity : AppCompatActivity() {
             // Start the Recommendations Activity or perform any action
             // startActivity(Intent(this, RecommendationsActivity::class.java))
         }
+
+        val bottomNavigation: BottomNavigationView = findViewById(R.id.bottomNavigation)
+        bottomNavigation.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.home -> {
+                    // Handle home navigation
+                    showToast("Home selected")
+                    true
+                }
+                R.id.history -> {
+                    // Handle history navigation
+                    showToast("History selected")
+                    true
+                }
+                R.id.profile -> {
+                    // Handle profile navigation
+                    showToast("Profile selected")
+                    true
+                }
+                R.id.scanner -> {
+                    // Handle scanner navigation
+                    showToast("Scanner selected")
+                    true
+                }
+                else -> false
+            }
+        }
+    }
+
+    private fun showToast(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }
+

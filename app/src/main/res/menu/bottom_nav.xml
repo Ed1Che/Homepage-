@@ -6,10 +6,11 @@
         android:icon="@drawable/baseline_home_24"/>
     <item android:title="History"
         android:id="@+id/history"
-        android:icon=""/>
+        android:icon="@drawable/ic_history"/>
     <item android:title="Profile"
         android:id="@+id/profile"
         android:icon="@drawable/baseline_person_24"/>
     <item android:title="Scanner"
-        android:id="@+id/scanner"/>
+        android:id="@+id/scanner"
+        android:icon="@drawable/ic_scanner"/>
 </menu>
